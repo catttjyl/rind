@@ -1,0 +1,3558 @@
+{
+  "schema": "deepsunlight.annual_fullday_18808_manifest.v1",
+  "snapshot_version": "V1.0",
+  "created_at": "2026-11-11T15:29:00+08:00",
+  "updated_at": "2026-11-11T17:55:00+08:00",
+  "canonical_format": {
+    "ray_tracing_range_m": 4000.0,
+    "tile_extent_m": [
+      100.0,
+      100.0
+    ],
+    "receiver_grid": [
+      512,
+      512
+    ],
+    "grid_spacing_m": 0.1953125,
+    "annual_weeks": 52,
+    "temporal_coverage": "2024 52 weekly full sunrise-to-sunset days (morning + solar noon + afternoon western sun + sunset)",
+    "cadence_seconds": 120,
+    "frames_per_tile": 18808,
+    "nominal_grid_point_frames_per_tile": 4930404352,
+    "nominal_grid_point_frames_note": "Nominal 512x512x18808 product; NOT valid_point_frames (UNKNOWN=-1 excluded).",
+    "noon_only_or_partial_slices_permitted_in_main_training": false
+  },
+  "authoritative_split_contract": {
+    "file": "MANHATTAN_4445_SPLIT_V1.json",
+    "sha256": "925a3d58f93899ba19b0eeaecc2c88eecdff6f03629c815b5ccd04e2107e97ed",
+    "spatial_block_disjointness_verified": true,
+    "additional_fit_holdout": [
+      "core_fi-0029-fj-0043"
+    ],
+    "canonical_buckets": [
+      "fit",
+      "student_holdout",
+      "calibration",
+      "val_spatial_clean",
+      "test_spatial_unexposed",
+      "test_spatial_legacy_reassigned"
+    ],
+    "historical_exposure_tri_state_values": [
+      "exposed",
+      "unexposed",
+      "unknown"
+    ],
+    "missing_exposure_policy": "unknown (strictly blocked from test_spatial_unexposed; boolean False fallback prohibited)"
+  },
+  "summary_counts": {
+    "fit": {
+      "tiles": 67,
+      "annual_frames": 1260136,
+      "nominal_grid_point_frames": 330337091584,
+      "registered_spatial_groups": 14,
+      "historical_exposure_breakdown": {
+        "exposed": 67,
+        "unexposed": 0,
+        "unknown": 0
+      }
+    },
+    "student_holdout": {
+      "tiles": 1,
+      "annual_frames": 18808,
+      "nominal_grid_point_frames": 4930404352,
+      "registered_spatial_groups": 1,
+      "historical_exposure_breakdown": {
+        "exposed": 1,
+        "unexposed": 0,
+        "unknown": 0
+      }
+    },
+    "calibration": {
+      "tiles": 12,
+      "annual_frames": 225696,
+      "nominal_grid_point_frames": 59164852224,
+      "registered_spatial_groups": 3,
+      "historical_exposure_breakdown": {
+        "exposed": 12,
+        "unexposed": 0,
+        "unknown": 0
+      }
+    },
+    "val_spatial_clean": {
+      "tiles": 14,
+      "annual_frames": 263312,
+      "nominal_grid_point_frames": 69025660928,
+      "registered_spatial_groups": 2,
+      "historical_exposure_breakdown": {
+        "exposed": 12,
+        "unexposed": 2,
+        "unknown": 0
+      }
+    },
+    "test_spatial_unexposed": {
+      "tiles": 0,
+      "annual_frames": 0,
+      "nominal_grid_point_frames": 0,
+      "registered_spatial_groups": 0,
+      "historical_exposure_breakdown": {
+        "exposed": 0,
+        "unexposed": 0,
+        "unknown": 0
+      },
+      "evaluation_status": "NA (N=0 registered tiles in Snapshot V1.0; pending expansion queue)"
+    },
+    "test_spatial_legacy_reassigned": {
+      "tiles": 16,
+      "annual_frames": 300928,
+      "nominal_grid_point_frames": 78886469632,
+      "registered_spatial_groups": 2,
+      "historical_exposure_breakdown": {
+        "exposed": 16,
+        "unexposed": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "legacy_partition_alias_counts": {
+    "calibration": 12,
+    "fit": 67,
+    "student_holdout": 1,
+    "test_first100_reassigned": 16,
+    "val": 12,
+    "val_fresh_unexposed": 2
+  },
+  "total_ready_tiles": 110,
+  "total_ready_annual_frames": 2068880,
+  "blind_test_v1_0_status": {
+    "bucket": "test_spatial_unexposed",
+    "registered_ready_tiles": 0,
+    "registered_ready_annual_frames": 0,
+    "reported_metric_value": "NA",
+    "unsealing_rule": "Freeze full model matrix, calibration thresholds, evaluator, and manifest/code SHA-256 before one-shot unsealing on newly generated test_spatial_unexposed tiles."
+  },
+  "partitions": {
+    "fit": [
+      "core_fi-0010-fj-0009",
+      "core_fi-0014-fj-0031",
+      "core_fi-0015-fj-0035",
+      "core_fi-0016-fj-0037",
+      "core_fi-0018-fj-0040",
+      "core_fi-0019-fj-0041",
+      "core_fi-0019-fj-0043",
+      "core_fi-0020-fj-0034",
+      "core_fi-0021-fj-0028",
+      "core_fi-0023-fj-0044",
+      "core_fi-0023-fj-0049",
+      "core_fi-0024-fj-0021",
+      "core_fi-0024-fj-0026",
+      "core_fi-0024-fj-0028",
+      "core_fi-0024-fj-0030",
+      "core_fi-0024-fj-0049",
+      "core_fi-0024-fj-0052",
+      "core_fi-0025-fj-0046",
+      "core_fi-0025-fj-0048",
+      "core_fi-0026-fj-0028",
+      "core_fi-0026-fj-0045",
+      "core_fi-0027-fj-0027",
+      "core_fi-0027-fj-0041",
+      "core_fi-0027-fj-0044",
+      "core_fi-0027-fj-0047",
+      "core_fi-0028-fj-0043",
+      "core_fi-0028-fj-0050",
+      "core_fi-0029-fj-0044",
+      "core_fi-0030-fj-0043",
+      "core_fi-0030-fj-0058",
+      "core_fi-0031-fj-0045",
+      "core_fi-0031-fj-0049",
+      "core_fi-0031-fj-0050",
+      "core_fi-0032-fj-0019",
+      "core_fi-0032-fj-0021",
+      "core_fi-0032-fj-0056",
+      "core_fi-0034-fj-0015",
+      "core_fi-0034-fj-0019",
+      "core_fi-0034-fj-0020",
+      "core_fi-0034-fj-0027",
+      "core_fi-0034-fj-0030",
+      "core_fi-0034-fj-0041",
+      "core_fi-0035-fj-0027",
+      "core_fi-0035-fj-0031",
+      "core_fi-0035-fj-0033",
+      "core_fi-0035-fj-0045",
+      "core_fi-0035-fj-0058",
+      "core_fi-0036-fj-0015",
+      "core_fi-0036-fj-0030",
+      "core_fi-0036-fj-0032",
+      "core_fi-0036-fj-0048",
+      "core_fi-0037-fj-0040",
+      "core_fi-0038-fj-0018",
+      "core_fi-0038-fj-0036",
+      "core_fi-0038-fj-0044",
+      "core_fi-0039-fj-0025",
+      "core_fi-0039-fj-0027",
+      "core_fi-0039-fj-0031",
+      "core_fi-0039-fj-0036",
+      "core_fi-0039-fj-0040",
+      "core_fi-0040-fj-0018",
+      "core_fi-0040-fj-0027",
+      "core_fi-0040-fj-0033",
+      "core_fi-0040-fj-0042",
+      "core_fi-0041-fj-0032",
+      "core_fi-0042-fj-0029",
+      "core_fi-0060-fj-0117"
+    ],
+    "student_holdout": [
+      "core_fi-0029-fj-0043"
+    ],
+    "calibration": [
+      "core_fi-0041-fj-0017",
+      "core_fi-0041-fj-0020",
+      "core_fi-0042-fj-0018",
+      "core_fi-0043-fj-0020",
+      "core_fi-0061-fj-0116",
+      "core_fi-0061-fj-0117",
+      "core_fi-0061-fj-0118",
+      "core_fi-0062-fj-0116",
+      "core_fi-0062-fj-0117",
+      "core_fi-0062-fj-0118",
+      "core_fi-0062-fj-0119",
+      "core_fi-0063-fj-0035"
+    ],
+    "val_spatial_clean": [
+      "core_fi-0011-fj-0013",
+      "core_fi-0012-fj-0012",
+      "core_fi-0012-fj-0026",
+      "core_fi-0013-fj-0017",
+      "core_fi-0014-fj-0012",
+      "core_fi-0014-fj-0016",
+      "core_fi-0014-fj-0025",
+      "core_fi-0014-fj-0030",
+      "core_fi-0015-fj-0027",
+      "core_fi-0017-fj-0016",
+      "core_fi-0017-fj-0027",
+      "core_fi-0018-fj-0012",
+      "core_fi-0018-fj-0013",
+      "core_fi-0018-fj-0019"
+    ],
+    "test_spatial_unexposed": [],
+    "test_spatial_legacy_reassigned": [
+      "core_fi-0022-fj-0013",
+      "core_fi-0023-fj-0014",
+      "core_fi-0024-fj-0018",
+      "core_fi-0024-fj-0033",
+      "core_fi-0025-fj-0016",
+      "core_fi-0025-fj-0020",
+      "core_fi-0025-fj-0031",
+      "core_fi-0025-fj-0032",
+      "core_fi-0025-fj-0034",
+      "core_fi-0025-fj-0040",
+      "core_fi-0026-fj-0018",
+      "core_fi-0027-fj-0035",
+      "core_fi-0028-fj-0035",
+      "core_fi-0029-fj-0014",
+      "core_fi-0029-fj-0017",
+      "core_fi-0030-fj-0017"
+    ]
+  },
+  "tiles": [
+    {
+      "tile_id": "core_fi-0041-fj-0017",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-5_j-2",
+      "tile_index": [
+        -41,
+        -17
+      ],
+      "world_bounds_xz_m": [
+        -4148.741,
+        -1721.863,
+        -4048.741,
+        -1621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0041-fj-0017",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0041-fj-0017",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "8897683bf2e1cc2a234018247e35935a1a9af0c6c3678ec99e168e9685d10c21"
+    },
+    {
+      "tile_id": "core_fi-0041-fj-0020",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-5_j-2",
+      "tile_index": [
+        -41,
+        -20
+      ],
+      "world_bounds_xz_m": [
+        -4148.741,
+        -2021.863,
+        -4048.741,
+        -1921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0041-fj-0020",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0041-fj-0020",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "source_core_sha256": "38357124258dabeff26a174e28d9daaf22de11e17a1d3dbfa3844881a146ceb9"
+    },
+    {
+      "tile_id": "core_fi-0042-fj-0018",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-5_j-2",
+      "tile_index": [
+        -42,
+        -18
+      ],
+      "world_bounds_xz_m": [
+        -4248.741,
+        -1821.863,
+        -4148.741,
+        -1721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0042-fj-0018",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0042-fj-0018",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "b8a91ce0a7baf2a0327a0759d4ccbdca9ea904a3d7df82543e51b62ffc77af19"
+    },
+    {
+      "tile_id": "core_fi-0043-fj-0020",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-5_j-2",
+      "tile_index": [
+        -43,
+        -20
+      ],
+      "world_bounds_xz_m": [
+        -4348.741,
+        -2021.863,
+        -4248.741,
+        -1921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0043-fj-0020",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0043-fj-0020",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "source_core_sha256": "8e8561ac72a1b96054843d2974e6ce05d9d15c6a00f10440fe4e9b7dc69de952"
+    },
+    {
+      "tile_id": "core_fi-0061-fj-0116",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-7_j-12",
+      "tile_index": [
+        -61,
+        -116
+      ],
+      "world_bounds_xz_m": [
+        -6148.741,
+        -11621.863,
+        -6048.741,
+        -11521.863
+      ],
+      "source_batch": "r05aa",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0116",
+      "win_data_dir": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0116",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0116/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0116/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "7f3997804d6f9191938f0f6667e0772e7796afc9632f4d107b9257a6d24e0469"
+    },
+    {
+      "tile_id": "core_fi-0061-fj-0117",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-7_j-12",
+      "tile_index": [
+        -61,
+        -117
+      ],
+      "world_bounds_xz_m": [
+        -6148.741,
+        -11721.863,
+        -6048.741,
+        -11621.863
+      ],
+      "source_batch": "r05aa",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0117",
+      "win_data_dir": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0117",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0117/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0117/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "fc0c017ebb52d5f0bc33fadafa806989772d9b26187aa77c67ff56658f21a1d7"
+    },
+    {
+      "tile_id": "core_fi-0061-fj-0118",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-7_j-12",
+      "tile_index": [
+        -61,
+        -118
+      ],
+      "world_bounds_xz_m": [
+        -6148.741,
+        -11821.863,
+        -6048.741,
+        -11721.863
+      ],
+      "source_batch": "r05aa",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0118",
+      "win_data_dir": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0118",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0118/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0061-fj-0118/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "d206f0a9ffd9a81241a49d7fe72d52e9090d875a0e62e03cdc6d22357e77c3d1"
+    },
+    {
+      "tile_id": "core_fi-0062-fj-0116",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-7_j-12",
+      "tile_index": [
+        -62,
+        -116
+      ],
+      "world_bounds_xz_m": [
+        -6248.741,
+        -11621.863,
+        -6148.741,
+        -11521.863
+      ],
+      "source_batch": "r05aa",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0116",
+      "win_data_dir": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0116",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0116/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0116/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "eebc4024f70b21015bbc23814dd3fe5f922bdfac39c0cf7c3ca280617f3bc6cf"
+    },
+    {
+      "tile_id": "core_fi-0062-fj-0117",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-7_j-12",
+      "tile_index": [
+        -62,
+        -117
+      ],
+      "world_bounds_xz_m": [
+        -6248.741,
+        -11721.863,
+        -6148.741,
+        -11621.863
+      ],
+      "source_batch": "r05aa",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0117",
+      "win_data_dir": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0117",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0117/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0117/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "0cff3a5fcf1eaa324602f66f4d1fe84a3a9c673cadadf64bc681f018a7629fa7"
+    },
+    {
+      "tile_id": "core_fi-0062-fj-0118",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-7_j-12",
+      "tile_index": [
+        -62,
+        -118
+      ],
+      "world_bounds_xz_m": [
+        -6248.741,
+        -11821.863,
+        -6148.741,
+        -11721.863
+      ],
+      "source_batch": "r05aa",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0118",
+      "win_data_dir": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0118",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0118/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0118/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "d48c004885314f24150833adb855359833af165a536e8e43d11ef155ae4cb04d"
+    },
+    {
+      "tile_id": "core_fi-0062-fj-0119",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-7_j-12",
+      "tile_index": [
+        -62,
+        -119
+      ],
+      "world_bounds_xz_m": [
+        -6248.741,
+        -11921.863,
+        -6148.741,
+        -11821.863
+      ],
+      "source_batch": "r05aa",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0119",
+      "win_data_dir": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0119",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0119/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0062-fj-0119/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "e486c23e1e98ec94309dfb2dd55e85559e6fbd187eef589903a88158c31c5cb5"
+    },
+    {
+      "tile_id": "core_fi-0063-fj-0035",
+      "canonical_role": "calibration",
+      "legacy_partition_alias": "calibration",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "calibration",
+      "spatial_group": "grid1km_i-7_j-4",
+      "tile_index": [
+        -63,
+        -35
+      ],
+      "world_bounds_xz_m": [
+        -6348.741,
+        -3521.863,
+        -6248.741,
+        -3421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0063-fj-0035",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0063-fj-0035",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "ea88bccd9e054781f1871367b0ff1f05b1448a3ccd662937760cf8b9c4dee045"
+    },
+    {
+      "tile_id": "core_fi-0010-fj-0009",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-1_j-1",
+      "tile_index": [
+        -10,
+        -9
+      ],
+      "world_bounds_xz_m": [
+        -1048.741,
+        -921.863,
+        -948.741,
+        -821.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0010-fj-0009",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0010-fj-0009",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "source_core_sha256": "f45ec5bef0759a9bbbdd1383e936f355f192867b28f34e635db74250a97d55ae"
+    },
+    {
+      "tile_id": "core_fi-0014-fj-0031",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-2_j-4",
+      "tile_index": [
+        -14,
+        -31
+      ],
+      "world_bounds_xz_m": [
+        -1448.741,
+        -3121.863,
+        -1348.741,
+        -3021.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0014-fj-0031",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0014-fj-0031",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "bd706291d8841f357ba8c51a8c85f6d00f456607d8d94ee756e954b38fc0bc5e"
+    },
+    {
+      "tile_id": "core_fi-0015-fj-0035",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-2_j-4",
+      "tile_index": [
+        -15,
+        -35
+      ],
+      "world_bounds_xz_m": [
+        -1548.741,
+        -3521.863,
+        -1448.741,
+        -3421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0015-fj-0035",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0015-fj-0035",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "d83c6ab3df273f3c56663cfa80d36c9e31745db0f94bf4a60e325f8bcab0eba5"
+    },
+    {
+      "tile_id": "core_fi-0016-fj-0037",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-2_j-4",
+      "tile_index": [
+        -16,
+        -37
+      ],
+      "world_bounds_xz_m": [
+        -1648.741,
+        -3721.863,
+        -1548.741,
+        -3621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0016-fj-0037",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0016-fj-0037",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "1b5533ec30fc471534d18e513746c6339beeeba572996d66c294b81a61a20b6f"
+    },
+    {
+      "tile_id": "core_fi-0018-fj-0040",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-2_j-4",
+      "tile_index": [
+        -18,
+        -40
+      ],
+      "world_bounds_xz_m": [
+        -1848.741,
+        -4021.863,
+        -1748.741,
+        -3921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0018-fj-0040",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0018-fj-0040",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "e2c7061f3fb1c2371220565f4dfffff4ab0523072c190eed3d31ade7c2d785a1"
+    },
+    {
+      "tile_id": "core_fi-0019-fj-0041",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-2_j-5",
+      "tile_index": [
+        -19,
+        -41
+      ],
+      "world_bounds_xz_m": [
+        -1948.741,
+        -4121.863,
+        -1848.741,
+        -4021.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0019-fj-0041",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0019-fj-0041",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "fa3d7bc0c3febc63d37de5669adcc95984007dddff4060c4ce495f598865722a"
+    },
+    {
+      "tile_id": "core_fi-0019-fj-0043",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-2_j-5",
+      "tile_index": [
+        -19,
+        -43
+      ],
+      "world_bounds_xz_m": [
+        -1948.741,
+        -4321.863,
+        -1848.741,
+        -4221.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0019-fj-0043",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0019-fj-0043",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "f3d4707d218eba443f61c842494482607a8c7dd784b20d63f4a1c0f7b14a5186"
+    },
+    {
+      "tile_id": "core_fi-0020-fj-0034",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-2_j-4",
+      "tile_index": [
+        -20,
+        -34
+      ],
+      "world_bounds_xz_m": [
+        -2048.741,
+        -3421.863,
+        -1948.741,
+        -3321.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0020-fj-0034",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0020-fj-0034",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "c6cc4d47c90779ec1a0c33d49a788ebec2b454e1a205ba7d4b8c8c48acf120e1"
+    },
+    {
+      "tile_id": "core_fi-0021-fj-0028",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-3",
+      "tile_index": [
+        -21,
+        -28
+      ],
+      "world_bounds_xz_m": [
+        -2148.741,
+        -2821.863,
+        -2048.741,
+        -2721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0021-fj-0028",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0021-fj-0028",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "d26e5fbbca8b459d15f04030d7706f8fb2731466b3ac7fab0aca52890949debe"
+    },
+    {
+      "tile_id": "core_fi-0023-fj-0044",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -23,
+        -44
+      ],
+      "world_bounds_xz_m": [
+        -2348.741,
+        -4421.863,
+        -2248.741,
+        -4321.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0023-fj-0044",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0023-fj-0044",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "db67ac30e0e4907cdbdede61ee2c17ac8ceea7182dca3e0722cfea5de44c21e4"
+    },
+    {
+      "tile_id": "core_fi-0023-fj-0049",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -23,
+        -49
+      ],
+      "world_bounds_xz_m": [
+        -2348.741,
+        -4921.863,
+        -2248.741,
+        -4821.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0023-fj-0049",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0023-fj-0049",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "source_core_sha256": "d5b276eb88b1a73c069e9e2d04fe02f3d0e103969022d4a7d2c0a7959d5449a4"
+    },
+    {
+      "tile_id": "core_fi-0024-fj-0021",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-3",
+      "tile_index": [
+        -24,
+        -21
+      ],
+      "world_bounds_xz_m": [
+        -2448.741,
+        -2121.863,
+        -2348.741,
+        -2021.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0024-fj-0021",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0024-fj-0021",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "395116c1bde66f77d974bf735983aad410ac8e4813c14f0ffbafb4334b44f801"
+    },
+    {
+      "tile_id": "core_fi-0024-fj-0026",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-3",
+      "tile_index": [
+        -24,
+        -26
+      ],
+      "world_bounds_xz_m": [
+        -2448.741,
+        -2621.863,
+        -2348.741,
+        -2521.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0024-fj-0026",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0024-fj-0026",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "source_core_sha256": "2ed26d46a7c3ef6064d70394e57f5ee0d058de75ad465301a9cd6fc2dcffebd6"
+    },
+    {
+      "tile_id": "core_fi-0024-fj-0028",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-3",
+      "tile_index": [
+        -24,
+        -28
+      ],
+      "world_bounds_xz_m": [
+        -2448.741,
+        -2821.863,
+        -2348.741,
+        -2721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0024-fj-0028",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0024-fj-0028",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "9c16ba273a0537f9a4d44ad82d67203c11392f5748511aba2a6b6a84eddcd330"
+    },
+    {
+      "tile_id": "core_fi-0024-fj-0030",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-3",
+      "tile_index": [
+        -24,
+        -30
+      ],
+      "world_bounds_xz_m": [
+        -2448.741,
+        -3021.863,
+        -2348.741,
+        -2921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0024-fj-0030",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0024-fj-0030",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "93e05cb97f50b6a0d752656cc155b650d8a703685c23554af3037087a7744c6c"
+    },
+    {
+      "tile_id": "core_fi-0024-fj-0049",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -24,
+        -49
+      ],
+      "world_bounds_xz_m": [
+        -2448.741,
+        -4921.863,
+        -2348.741,
+        -4821.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0024-fj-0049",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0024-fj-0049",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "source_core_sha256": "ef448d9200b4ea5ada2be45e4102e12b1eff009c5fbf743f9cb38b485ddaa0da"
+    },
+    {
+      "tile_id": "core_fi-0024-fj-0052",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-6",
+      "tile_index": [
+        -24,
+        -52
+      ],
+      "world_bounds_xz_m": [
+        -2448.741,
+        -5221.863,
+        -2348.741,
+        -5121.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0024-fj-0052",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0024-fj-0052",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "592584fe8da1bb320e61ea11a1e8c148541991988d51ed2894abc0acbf53a158"
+    },
+    {
+      "tile_id": "core_fi-0025-fj-0046",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -25,
+        -46
+      ],
+      "world_bounds_xz_m": [
+        -2548.741,
+        -4621.863,
+        -2448.741,
+        -4521.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0025-fj-0046",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0025-fj-0046",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "87403b8c83f40521a2c002206566b9bffad34d78bf39fcadf12a7179d331c2a7"
+    },
+    {
+      "tile_id": "core_fi-0025-fj-0048",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -25,
+        -48
+      ],
+      "world_bounds_xz_m": [
+        -2548.741,
+        -4821.863,
+        -2448.741,
+        -4721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0025-fj-0048",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0025-fj-0048",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "source_core_sha256": "a8a44277fd761c5a9361340a30cc494479bb9621e81f96177ff46e13dcf648d2"
+    },
+    {
+      "tile_id": "core_fi-0026-fj-0028",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-3",
+      "tile_index": [
+        -26,
+        -28
+      ],
+      "world_bounds_xz_m": [
+        -2648.741,
+        -2821.863,
+        -2548.741,
+        -2721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0026-fj-0028",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0026-fj-0028",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "05b30481fece3dc4fcac688d1d9d5c67df0d05af3178a5405b6513ea255e6efc"
+    },
+    {
+      "tile_id": "core_fi-0026-fj-0045",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -26,
+        -45
+      ],
+      "world_bounds_xz_m": [
+        -2648.741,
+        -4521.863,
+        -2548.741,
+        -4421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0026-fj-0045",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0026-fj-0045",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "8decfebbdcaefe3932b41e9589ff93ef34067529f320f22efbe89d6d50254ad6"
+    },
+    {
+      "tile_id": "core_fi-0027-fj-0027",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-3",
+      "tile_index": [
+        -27,
+        -27
+      ],
+      "world_bounds_xz_m": [
+        -2748.741,
+        -2721.863,
+        -2648.741,
+        -2621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0027-fj-0027",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0027-fj-0027",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "source_core_sha256": "0d2cb8eeb12ee9faa49b6d5c4c5fa8476f279baa9c5b96088610a41b80dbbaf5"
+    },
+    {
+      "tile_id": "core_fi-0027-fj-0041",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -27,
+        -41
+      ],
+      "world_bounds_xz_m": [
+        -2748.741,
+        -4121.863,
+        -2648.741,
+        -4021.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0027-fj-0041",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0027-fj-0041",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "e7d8f86d488f946356eb531bb41447e0efeaa9cde8e7e697aebd1bafdd7b167e"
+    },
+    {
+      "tile_id": "core_fi-0027-fj-0044",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -27,
+        -44
+      ],
+      "world_bounds_xz_m": [
+        -2748.741,
+        -4421.863,
+        -2648.741,
+        -4321.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0027-fj-0044",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0027-fj-0044",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "cf5bae5200126b6a20086019230413af89a769472af977d1c426b81c2a3de0c8"
+    },
+    {
+      "tile_id": "core_fi-0027-fj-0047",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -27,
+        -47
+      ],
+      "world_bounds_xz_m": [
+        -2748.741,
+        -4721.863,
+        -2648.741,
+        -4621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0027-fj-0047",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0027-fj-0047",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "6e5a0f4a4637156ce4dc1ab10e6f4d3745d48e5f52f0b96a6c38787d4ae30e5c"
+    },
+    {
+      "tile_id": "core_fi-0028-fj-0043",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -28,
+        -43
+      ],
+      "world_bounds_xz_m": [
+        -2848.741,
+        -4321.863,
+        -2748.741,
+        -4221.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0028-fj-0043",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0028-fj-0043",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "a1e5ef64316a5daaddea5a1de1b63f322eb3b72550d8dbd194ee9d1ec73fec23"
+    },
+    {
+      "tile_id": "core_fi-0028-fj-0050",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -28,
+        -50
+      ],
+      "world_bounds_xz_m": [
+        -2848.741,
+        -5021.863,
+        -2748.741,
+        -4921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0028-fj-0050",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0028-fj-0050",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "source_core_sha256": "67af0a18634ff444e2b3fd98a98335cbb3579932469a236f6ce37015f6fe629a"
+    },
+    {
+      "tile_id": "core_fi-0029-fj-0044",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -29,
+        -44
+      ],
+      "world_bounds_xz_m": [
+        -2948.741,
+        -4421.863,
+        -2848.741,
+        -4321.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0029-fj-0044",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0029-fj-0044",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "a9dece09a8ad1999d9eda8ef888f35349e2b75fcdb1a1cfb9a3753ac16331a27"
+    },
+    {
+      "tile_id": "core_fi-0030-fj-0043",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -30,
+        -43
+      ],
+      "world_bounds_xz_m": [
+        -3048.741,
+        -4321.863,
+        -2948.741,
+        -4221.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0030-fj-0043",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0030-fj-0043",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "f6072e059b9ec3c48c3bbf186b110c69a80c9d746a0e39aef4ae104050713a8f"
+    },
+    {
+      "tile_id": "core_fi-0030-fj-0058",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-6",
+      "tile_index": [
+        -30,
+        -58
+      ],
+      "world_bounds_xz_m": [
+        -3048.741,
+        -5821.863,
+        -2948.741,
+        -5721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0030-fj-0058",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0030-fj-0058",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "source_core_sha256": "722c64bffa9c9c76e26a0295106c0e50bac1a956885357a5c9ce51675e689946"
+    },
+    {
+      "tile_id": "core_fi-0031-fj-0045",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-5",
+      "tile_index": [
+        -31,
+        -45
+      ],
+      "world_bounds_xz_m": [
+        -3148.741,
+        -4521.863,
+        -3048.741,
+        -4421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0031-fj-0045",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0031-fj-0045",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "be50b2e7426bca48b7f9af26200c870464c95cc5c8735c7829b20060236f69f4"
+    },
+    {
+      "tile_id": "core_fi-0031-fj-0049",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-5",
+      "tile_index": [
+        -31,
+        -49
+      ],
+      "world_bounds_xz_m": [
+        -3148.741,
+        -4921.863,
+        -3048.741,
+        -4821.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0031-fj-0049",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0031-fj-0049",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "c691feae60b5312a76a66598539e8deaf90df138a7db1ed4f13b96050f2d4ff8"
+    },
+    {
+      "tile_id": "core_fi-0031-fj-0050",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-5",
+      "tile_index": [
+        -31,
+        -50
+      ],
+      "world_bounds_xz_m": [
+        -3148.741,
+        -5021.863,
+        -3048.741,
+        -4921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0031-fj-0050",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0031-fj-0050",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "source_core_sha256": "6e7ac9afaf80fff3851dd1507988e0863a293657cbdd0f30abe28a3d477ca7a0"
+    },
+    {
+      "tile_id": "core_fi-0032-fj-0019",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-2",
+      "tile_index": [
+        -32,
+        -19
+      ],
+      "world_bounds_xz_m": [
+        -3248.741,
+        -1921.863,
+        -3148.741,
+        -1821.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0032-fj-0019",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0032-fj-0019",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "68c0771f605deca83d50f3130580df77fa41da8aeccdbdaab5d0adde1823f234"
+    },
+    {
+      "tile_id": "core_fi-0032-fj-0021",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-3",
+      "tile_index": [
+        -32,
+        -21
+      ],
+      "world_bounds_xz_m": [
+        -3248.741,
+        -2121.863,
+        -3148.741,
+        -2021.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0032-fj-0021",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0032-fj-0021",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "c734c747cefd704d67ae37cb8c18eabc186334be44d251019cd0e2a3f7c436eb"
+    },
+    {
+      "tile_id": "core_fi-0032-fj-0056",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-6",
+      "tile_index": [
+        -32,
+        -56
+      ],
+      "world_bounds_xz_m": [
+        -3248.741,
+        -5621.863,
+        -3148.741,
+        -5521.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0032-fj-0056",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0032-fj-0056",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "source_core_sha256": "ccc09f9959dc41418e0003da41550c7cbb0dc378861fa5307854190e75b07212"
+    },
+    {
+      "tile_id": "core_fi-0034-fj-0015",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-2",
+      "tile_index": [
+        -34,
+        -15
+      ],
+      "world_bounds_xz_m": [
+        -3448.741,
+        -1521.863,
+        -3348.741,
+        -1421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0034-fj-0015",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0034-fj-0015",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "source_core_sha256": "01e3299b8214d54b2a1a7c1fc4ce1f365c44eb8007f59023e5e17b88dab7f228"
+    },
+    {
+      "tile_id": "core_fi-0034-fj-0019",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-2",
+      "tile_index": [
+        -34,
+        -19
+      ],
+      "world_bounds_xz_m": [
+        -3448.741,
+        -1921.863,
+        -3348.741,
+        -1821.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0034-fj-0019",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0034-fj-0019",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "source_core_sha256": "60c603e2967e6cd1f562b9d85252152f55fa76a43b4c8896e84c0c8d4b01a525"
+    },
+    {
+      "tile_id": "core_fi-0034-fj-0020",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-2",
+      "tile_index": [
+        -34,
+        -20
+      ],
+      "world_bounds_xz_m": [
+        -3448.741,
+        -2021.863,
+        -3348.741,
+        -1921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0034-fj-0020",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0034-fj-0020",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "df001d29cf90feba2255d9f79e399537162ad2dc28aa1f6ee3246981bb5e3050"
+    },
+    {
+      "tile_id": "core_fi-0034-fj-0027",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-3",
+      "tile_index": [
+        -34,
+        -27
+      ],
+      "world_bounds_xz_m": [
+        -3448.741,
+        -2721.863,
+        -3348.741,
+        -2621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0034-fj-0027",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0034-fj-0027",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "source_core_sha256": "c66cbb7341e249fbbdeb9513020dffc7c66780b5a410264298ad22bbd698b94c"
+    },
+    {
+      "tile_id": "core_fi-0034-fj-0030",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-3",
+      "tile_index": [
+        -34,
+        -30
+      ],
+      "world_bounds_xz_m": [
+        -3448.741,
+        -3021.863,
+        -3348.741,
+        -2921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0034-fj-0030",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0034-fj-0030",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "8680c0dd43bc85876530dcb298f2981de1ef70b33ec5b4dab467b336e3235b2a"
+    },
+    {
+      "tile_id": "core_fi-0034-fj-0041",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-5",
+      "tile_index": [
+        -34,
+        -41
+      ],
+      "world_bounds_xz_m": [
+        -3448.741,
+        -4121.863,
+        -3348.741,
+        -4021.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0034-fj-0041",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0034-fj-0041",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "aad46e0087014e9890949291931bf65eec3bf6c3d75908bb05b629c91c09f1dd"
+    },
+    {
+      "tile_id": "core_fi-0035-fj-0027",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-3",
+      "tile_index": [
+        -35,
+        -27
+      ],
+      "world_bounds_xz_m": [
+        -3548.741,
+        -2721.863,
+        -3448.741,
+        -2621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0035-fj-0027",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0035-fj-0027",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "source_core_sha256": "fa8e16bf99982e56cda7eac98d9c191a0270c04044e9dd8f8c21a0df0360c8ba"
+    },
+    {
+      "tile_id": "core_fi-0035-fj-0031",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-4",
+      "tile_index": [
+        -35,
+        -31
+      ],
+      "world_bounds_xz_m": [
+        -3548.741,
+        -3121.863,
+        -3448.741,
+        -3021.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0035-fj-0031",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0035-fj-0031",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "source_core_sha256": "4962076c9c6b84753170a34c566837235dfd5740836334883a33e4070c7f5e8e"
+    },
+    {
+      "tile_id": "core_fi-0035-fj-0033",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-4",
+      "tile_index": [
+        -35,
+        -33
+      ],
+      "world_bounds_xz_m": [
+        -3548.741,
+        -3321.863,
+        -3448.741,
+        -3221.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0035-fj-0033",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0035-fj-0033",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "7702eac113dd8fec8863a483c0b1737ce2b8e2067d9dd07aaf79b796ff900075"
+    },
+    {
+      "tile_id": "core_fi-0035-fj-0045",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-5",
+      "tile_index": [
+        -35,
+        -45
+      ],
+      "world_bounds_xz_m": [
+        -3548.741,
+        -4521.863,
+        -3448.741,
+        -4421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0035-fj-0045",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0035-fj-0045",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "1fb63cf083ef81061f3ca7c2ce4face90ec820c3dcf1f6bb7e5057ee577294fb"
+    },
+    {
+      "tile_id": "core_fi-0035-fj-0058",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-6",
+      "tile_index": [
+        -35,
+        -58
+      ],
+      "world_bounds_xz_m": [
+        -3548.741,
+        -5821.863,
+        -3448.741,
+        -5721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0035-fj-0058",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0035-fj-0058",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "source_core_sha256": "31361f2beccd7b8fc16511cfef4d125cffd1a5854fda88e2296affb34821ed94"
+    },
+    {
+      "tile_id": "core_fi-0036-fj-0015",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-2",
+      "tile_index": [
+        -36,
+        -15
+      ],
+      "world_bounds_xz_m": [
+        -3648.741,
+        -1521.863,
+        -3548.741,
+        -1421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0036-fj-0015",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0036-fj-0015",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "source_core_sha256": "229faf60fcb4c8a22c6873baafbcf05d6cf6388a55222161aeea24774248c2c6"
+    },
+    {
+      "tile_id": "core_fi-0036-fj-0030",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-3",
+      "tile_index": [
+        -36,
+        -30
+      ],
+      "world_bounds_xz_m": [
+        -3648.741,
+        -3021.863,
+        -3548.741,
+        -2921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0036-fj-0030",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0036-fj-0030",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "75d18590c3c156b9c39ae0f0751d8bb5cbc3770757ab6cb1c5eeefff4bbb1950"
+    },
+    {
+      "tile_id": "core_fi-0036-fj-0032",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-4",
+      "tile_index": [
+        -36,
+        -32
+      ],
+      "world_bounds_xz_m": [
+        -3648.741,
+        -3221.863,
+        -3548.741,
+        -3121.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0036-fj-0032",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0036-fj-0032",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "c5e573ecd64ec2001cc09c70a84a47eaf1f887e75312ccd4a50a3a71b2a1d2f4"
+    },
+    {
+      "tile_id": "core_fi-0036-fj-0048",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-5",
+      "tile_index": [
+        -36,
+        -48
+      ],
+      "world_bounds_xz_m": [
+        -3648.741,
+        -4821.863,
+        -3548.741,
+        -4721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0036-fj-0048",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/regions/core_fi-0036-fj-0048",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part05-B5/portable_reader.py",
+      "source_core_sha256": "82c5afb4d0956ee1308ea442bb598bbd49adda127bd7ca118a3980b94f1396dc"
+    },
+    {
+      "tile_id": "core_fi-0037-fj-0040",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-4",
+      "tile_index": [
+        -37,
+        -40
+      ],
+      "world_bounds_xz_m": [
+        -3748.741,
+        -4021.863,
+        -3648.741,
+        -3921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0037-fj-0040",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0037-fj-0040",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "bc4e8f1de7fa88ef5161e8ff9458b9ed8a46987fa7424c69cb574d847be7e5f2"
+    },
+    {
+      "tile_id": "core_fi-0038-fj-0018",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-2",
+      "tile_index": [
+        -38,
+        -18
+      ],
+      "world_bounds_xz_m": [
+        -3848.741,
+        -1821.863,
+        -3748.741,
+        -1721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0038-fj-0018",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0038-fj-0018",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "source_core_sha256": "7d9c9c16007ce18bcb7a897e8a99ef34ceb8f8abd0cda881e54242eabcdc99fe"
+    },
+    {
+      "tile_id": "core_fi-0038-fj-0036",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-4",
+      "tile_index": [
+        -38,
+        -36
+      ],
+      "world_bounds_xz_m": [
+        -3848.741,
+        -3621.863,
+        -3748.741,
+        -3521.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0038-fj-0036",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0038-fj-0036",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "4e85e7361042777c4b68613001dfde12bb38953adbbbe4b66fda18373101abd6"
+    },
+    {
+      "tile_id": "core_fi-0038-fj-0044",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-5",
+      "tile_index": [
+        -38,
+        -44
+      ],
+      "world_bounds_xz_m": [
+        -3848.741,
+        -4421.863,
+        -3748.741,
+        -4321.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0038-fj-0044",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/regions/core_fi-0038-fj-0044",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part04-B4/portable_reader.py",
+      "source_core_sha256": "8804159e58045be29e1de66c80e9a3653cf3f340447d4f6d840423f4ee549a59"
+    },
+    {
+      "tile_id": "core_fi-0039-fj-0025",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-3",
+      "tile_index": [
+        -39,
+        -25
+      ],
+      "world_bounds_xz_m": [
+        -3948.741,
+        -2521.863,
+        -3848.741,
+        -2421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0039-fj-0025",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0039-fj-0025",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "source_core_sha256": "75bac03688794328cdb3ccfee81ae5b39acaf070ae2c62938772e02a2d8657c8"
+    },
+    {
+      "tile_id": "core_fi-0039-fj-0027",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-3",
+      "tile_index": [
+        -39,
+        -27
+      ],
+      "world_bounds_xz_m": [
+        -3948.741,
+        -2721.863,
+        -3848.741,
+        -2621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0039-fj-0027",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0039-fj-0027",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "source_core_sha256": "a6b34ba85315bcd9401093931287c9740feac42c214632440a97a053d69e0677"
+    },
+    {
+      "tile_id": "core_fi-0039-fj-0031",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-4",
+      "tile_index": [
+        -39,
+        -31
+      ],
+      "world_bounds_xz_m": [
+        -3948.741,
+        -3121.863,
+        -3848.741,
+        -3021.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0039-fj-0031",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0039-fj-0031",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "ed2d127cb3558161153a8e9defdc1f5644efa7bcb0dac887fee5f585cd90158d"
+    },
+    {
+      "tile_id": "core_fi-0039-fj-0036",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-4",
+      "tile_index": [
+        -39,
+        -36
+      ],
+      "world_bounds_xz_m": [
+        -3948.741,
+        -3621.863,
+        -3848.741,
+        -3521.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0039-fj-0036",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0039-fj-0036",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "e5f1a51c343491e9e967ba1d48064b9fab531c7693d147620c94d003bd01e463"
+    },
+    {
+      "tile_id": "core_fi-0039-fj-0040",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-4",
+      "tile_index": [
+        -39,
+        -40
+      ],
+      "world_bounds_xz_m": [
+        -3948.741,
+        -4021.863,
+        -3848.741,
+        -3921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0039-fj-0040",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0039-fj-0040",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "6a0933b44b699e9e49582e24e46a965236aad1b0ba95bf3771c8758cb2a2459f"
+    },
+    {
+      "tile_id": "core_fi-0040-fj-0018",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-2",
+      "tile_index": [
+        -40,
+        -18
+      ],
+      "world_bounds_xz_m": [
+        -4048.741,
+        -1821.863,
+        -3948.741,
+        -1721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0040-fj-0018",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0040-fj-0018",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "38181c8a5af7cca591deaf64253c3fbdd08a7c043a6c7aabc0eb628a8fde7b31"
+    },
+    {
+      "tile_id": "core_fi-0040-fj-0027",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-3",
+      "tile_index": [
+        -40,
+        -27
+      ],
+      "world_bounds_xz_m": [
+        -4048.741,
+        -2721.863,
+        -3948.741,
+        -2621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0040-fj-0027",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0040-fj-0027",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "source_core_sha256": "a668fe8045305bdeb9ee4bb8cb54a9b875279101caba33838878a46d8e345f02"
+    },
+    {
+      "tile_id": "core_fi-0040-fj-0033",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-4",
+      "tile_index": [
+        -40,
+        -33
+      ],
+      "world_bounds_xz_m": [
+        -4048.741,
+        -3321.863,
+        -3948.741,
+        -3221.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0040-fj-0033",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0040-fj-0033",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "0946855e5926978b7a973c9f0cd01771b53647f82cac2598e7e330ec7360e7fd"
+    },
+    {
+      "tile_id": "core_fi-0040-fj-0042",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-4_j-5",
+      "tile_index": [
+        -40,
+        -42
+      ],
+      "world_bounds_xz_m": [
+        -4048.741,
+        -4221.863,
+        -3948.741,
+        -4121.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0040-fj-0042",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0040-fj-0042",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "83f6f0e8d91d00fe90055ee6e64aab6aee801a2cb3f3e0de500c98ed86f87b9c"
+    },
+    {
+      "tile_id": "core_fi-0041-fj-0032",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-5_j-4",
+      "tile_index": [
+        -41,
+        -32
+      ],
+      "world_bounds_xz_m": [
+        -4148.741,
+        -3221.863,
+        -4048.741,
+        -3121.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0041-fj-0032",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0041-fj-0032",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "3691700b38fbdac6e651fd3c9cc6286185fa3d23cc44f7b7b05e17f523626f95"
+    },
+    {
+      "tile_id": "core_fi-0042-fj-0029",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-5_j-3",
+      "tile_index": [
+        -42,
+        -29
+      ],
+      "world_bounds_xz_m": [
+        -4248.741,
+        -2921.863,
+        -4148.741,
+        -2821.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0042-fj-0029",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0042-fj-0029",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "c00554eb7624ddf2977632f47ed0b536134cd3703271c9da4a6049b5458107cd"
+    },
+    {
+      "tile_id": "core_fi-0060-fj-0117",
+      "canonical_role": "fit",
+      "legacy_partition_alias": "fit",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-6_j-12",
+      "tile_index": [
+        -60,
+        -117
+      ],
+      "world_bounds_xz_m": [
+        -6048.741,
+        -11721.863,
+        -5948.741,
+        -11621.863
+      ],
+      "source_batch": "r05aa",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0060-fj-0117",
+      "win_data_dir": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0060-fj-0117",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0060-fj-0117/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/manhattan-r05aa-continuous-20261028-0ba2df7e/output/core_fi-0060-fj-0117/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "4727dd07578472556ea61a42c6015f73718ef389e6f30d9d2bcc0f66bb881790"
+    },
+    {
+      "tile_id": "core_fi-0029-fj-0043",
+      "canonical_role": "student_holdout",
+      "legacy_partition_alias": "student_holdout",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "train",
+      "authoritative_training_partition": "fit",
+      "spatial_group": "grid1km_i-3_j-5",
+      "tile_index": [
+        -29,
+        -43
+      ],
+      "world_bounds_xz_m": [
+        -2948.741,
+        -4321.863,
+        -2848.741,
+        -4221.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0029-fj-0043",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0029-fj-0043",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "6db4510bb2a03df7e01a8142c0fff32cc1704afb782c73a1b97d23a8e153c833"
+    },
+    {
+      "tile_id": "core_fi-0022-fj-0013",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-2",
+      "tile_index": [
+        -22,
+        -13
+      ],
+      "world_bounds_xz_m": [
+        -2248.741,
+        -1321.863,
+        -2148.741,
+        -1221.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0022-fj-0013",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0022-fj-0013",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "d9713bdd4605bfc6e97afff41c1c94b7702c25e605cd30f4cef0d31acc7e94a9"
+    },
+    {
+      "tile_id": "core_fi-0023-fj-0014",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-2",
+      "tile_index": [
+        -23,
+        -14
+      ],
+      "world_bounds_xz_m": [
+        -2348.741,
+        -1421.863,
+        -2248.741,
+        -1321.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0023-fj-0014",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0023-fj-0014",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "d440888f265b102f208017d01f5f4a917273f061fd0792efacc27f1ef61eff55"
+    },
+    {
+      "tile_id": "core_fi-0024-fj-0018",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-2",
+      "tile_index": [
+        -24,
+        -18
+      ],
+      "world_bounds_xz_m": [
+        -2448.741,
+        -1821.863,
+        -2348.741,
+        -1721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0024-fj-0018",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0024-fj-0018",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "source_core_sha256": "4afb2ff1723a34dfeb554a3b3c8ad8571ba9cb4b4d1aefe17b49b73cf2888ceb"
+    },
+    {
+      "tile_id": "core_fi-0024-fj-0033",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-4",
+      "tile_index": [
+        -24,
+        -33
+      ],
+      "world_bounds_xz_m": [
+        -2448.741,
+        -3321.863,
+        -2348.741,
+        -3221.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0024-fj-0033",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0024-fj-0033",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "2986f3299992328eff2b73cb469458e623f21ef9e575a267f3a53b233eeb1851"
+    },
+    {
+      "tile_id": "core_fi-0025-fj-0016",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-2",
+      "tile_index": [
+        -25,
+        -16
+      ],
+      "world_bounds_xz_m": [
+        -2548.741,
+        -1621.863,
+        -2448.741,
+        -1521.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0016",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0016",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "dad7e3d2abdca25a62683780726bdbe855f9963a1f49089fde92c6103b81b4e4"
+    },
+    {
+      "tile_id": "core_fi-0025-fj-0020",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-2",
+      "tile_index": [
+        -25,
+        -20
+      ],
+      "world_bounds_xz_m": [
+        -2548.741,
+        -2021.863,
+        -2448.741,
+        -1921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0020",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0020",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "8ef4f9af8ca80d4b64fa8fedba720a244bfe56e214731a2f724dc086eea46bf5"
+    },
+    {
+      "tile_id": "core_fi-0025-fj-0031",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-4",
+      "tile_index": [
+        -25,
+        -31
+      ],
+      "world_bounds_xz_m": [
+        -2548.741,
+        -3121.863,
+        -2448.741,
+        -3021.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0031",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0031",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "1cad3e97bfe2500be643c4d27a29efdb30faf40d9a8ad2b2e53c1241dd797cfc"
+    },
+    {
+      "tile_id": "core_fi-0025-fj-0032",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-4",
+      "tile_index": [
+        -25,
+        -32
+      ],
+      "world_bounds_xz_m": [
+        -2548.741,
+        -3221.863,
+        -2448.741,
+        -3121.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0032",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0032",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "7dad80ae7f6a68d36d51f03141db1785161cb8ee34b01db09e7a9dbe92e49c9c"
+    },
+    {
+      "tile_id": "core_fi-0025-fj-0034",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-4",
+      "tile_index": [
+        -25,
+        -34
+      ],
+      "world_bounds_xz_m": [
+        -2548.741,
+        -3421.863,
+        -2448.741,
+        -3321.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0034",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0034",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "f4d990419a150d3fbd1ef0bd0e6f5a87c998c534d75b4e9b9a94ffc270eec83a"
+    },
+    {
+      "tile_id": "core_fi-0025-fj-0040",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-4",
+      "tile_index": [
+        -25,
+        -40
+      ],
+      "world_bounds_xz_m": [
+        -2548.741,
+        -4021.863,
+        -2448.741,
+        -3921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0040",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0025-fj-0040",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "5153470256af98693cff245a2d4c7564d8dcd3362285680ff95798f61cbb1ad8"
+    },
+    {
+      "tile_id": "core_fi-0026-fj-0018",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-2",
+      "tile_index": [
+        -26,
+        -18
+      ],
+      "world_bounds_xz_m": [
+        -2648.741,
+        -1821.863,
+        -2548.741,
+        -1721.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0026-fj-0018",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0026-fj-0018",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "453687045b28f3cf8f58b687f5917f681ef7438bbc3c3acedc5376bb374b8e2f"
+    },
+    {
+      "tile_id": "core_fi-0027-fj-0035",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-4",
+      "tile_index": [
+        -27,
+        -35
+      ],
+      "world_bounds_xz_m": [
+        -2748.741,
+        -3521.863,
+        -2648.741,
+        -3421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0027-fj-0035",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0027-fj-0035",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "b77185cac6c7ac945495d6dd148a280f11f6448ca231ef508f78727879bf8c22"
+    },
+    {
+      "tile_id": "core_fi-0028-fj-0035",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-4",
+      "tile_index": [
+        -28,
+        -35
+      ],
+      "world_bounds_xz_m": [
+        -2848.741,
+        -3521.863,
+        -2748.741,
+        -3421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0028-fj-0035",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0028-fj-0035",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "7694962df86dc3d4b980bd2142880c05dcac46d151f8b73f7f89842eaae0c8c1"
+    },
+    {
+      "tile_id": "core_fi-0029-fj-0014",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-2",
+      "tile_index": [
+        -29,
+        -14
+      ],
+      "world_bounds_xz_m": [
+        -2948.741,
+        -1421.863,
+        -2848.741,
+        -1321.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0029-fj-0014",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0029-fj-0014",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "source_core_sha256": "a4cd5edc3bca1fe09947765d0894f4c0725dc3368decc98dc75c4f97f386387d"
+    },
+    {
+      "tile_id": "core_fi-0029-fj-0017",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-2",
+      "tile_index": [
+        -29,
+        -17
+      ],
+      "world_bounds_xz_m": [
+        -2948.741,
+        -1721.863,
+        -2848.741,
+        -1621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0029-fj-0017",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0029-fj-0017",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "b8a74b3212455026bbf8cf7fdbd2dd4634b4f763c29efb07652811de5bc77f0a"
+    },
+    {
+      "tile_id": "core_fi-0030-fj-0017",
+      "canonical_role": "test_spatial_legacy_reassigned",
+      "legacy_partition_alias": "test_first100_reassigned",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "test",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-3_j-2",
+      "tile_index": [
+        -30,
+        -17
+      ],
+      "world_bounds_xz_m": [
+        -3048.741,
+        -1721.863,
+        -2948.741,
+        -1621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0030-fj-0017",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0030-fj-0017",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "e4d7da8075a39a5dbb4d9bedaf576ee6abb3aadd1c98551fff33466b2cb60281"
+    },
+    {
+      "tile_id": "core_fi-0011-fj-0013",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-2",
+      "tile_index": [
+        -11,
+        -13
+      ],
+      "world_bounds_xz_m": [
+        -1148.741,
+        -1321.863,
+        -1048.741,
+        -1221.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0011-fj-0013",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0011-fj-0013",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "source_core_sha256": "b49c576f72b218151839a28be01f6f3c84157afdeba97be11056ffd2c96fa217"
+    },
+    {
+      "tile_id": "core_fi-0012-fj-0012",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-2",
+      "tile_index": [
+        -12,
+        -12
+      ],
+      "world_bounds_xz_m": [
+        -1248.741,
+        -1221.863,
+        -1148.741,
+        -1121.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0012-fj-0012",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0012-fj-0012",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "source_core_sha256": "d97d632a17b8bfb8d40ce68c4b3cdc4de41fa1867455df1c71934e0aabda65bc"
+    },
+    {
+      "tile_id": "core_fi-0012-fj-0026",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-3",
+      "tile_index": [
+        -12,
+        -26
+      ],
+      "world_bounds_xz_m": [
+        -1248.741,
+        -2621.863,
+        -1148.741,
+        -2521.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0012-fj-0026",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0012-fj-0026",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "0b900e3b6f43f6b68a7e358ecd62e649d579923f420cd070618c3234d3b6b12d"
+    },
+    {
+      "tile_id": "core_fi-0013-fj-0017",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-2",
+      "tile_index": [
+        -13,
+        -17
+      ],
+      "world_bounds_xz_m": [
+        -1348.741,
+        -1721.863,
+        -1248.741,
+        -1621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0013-fj-0017",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0013-fj-0017",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "source_core_sha256": "e322061c9d66ff0c1f3e05d65c791685e28b8931938997e54a0cd63c3e38b744"
+    },
+    {
+      "tile_id": "core_fi-0014-fj-0012",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-2",
+      "tile_index": [
+        -14,
+        -12
+      ],
+      "world_bounds_xz_m": [
+        -1448.741,
+        -1221.863,
+        -1348.741,
+        -1121.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0014-fj-0012",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0014-fj-0012",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "source_core_sha256": "a511952b8e8a9d4ba381a402ee09ce134b58b96ce14be9c7cc0848f5b17f4c96"
+    },
+    {
+      "tile_id": "core_fi-0014-fj-0016",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-2",
+      "tile_index": [
+        -14,
+        -16
+      ],
+      "world_bounds_xz_m": [
+        -1448.741,
+        -1621.863,
+        -1348.741,
+        -1521.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0014-fj-0016",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0014-fj-0016",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "source_core_sha256": "4942a1bdbdfb36f6080e28c6eb30914e4bc7d09c508f65bcc7f9f3b6f56bd100"
+    },
+    {
+      "tile_id": "core_fi-0014-fj-0025",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-3",
+      "tile_index": [
+        -14,
+        -25
+      ],
+      "world_bounds_xz_m": [
+        -1448.741,
+        -2521.863,
+        -1348.741,
+        -2421.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0014-fj-0025",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0014-fj-0025",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "source_core_sha256": "f9562c6f054f8e4eaaf0a40f966f806b861d48a31e3c525719a23f91a85784ae"
+    },
+    {
+      "tile_id": "core_fi-0014-fj-0030",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-3",
+      "tile_index": [
+        -14,
+        -30
+      ],
+      "world_bounds_xz_m": [
+        -1448.741,
+        -3021.863,
+        -1348.741,
+        -2921.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0014-fj-0030",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0014-fj-0030",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "89bcc62bd596ddca69f74a70c042e7cee70feb0c5e1b01553c48aff200868a70"
+    },
+    {
+      "tile_id": "core_fi-0015-fj-0027",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-3",
+      "tile_index": [
+        -15,
+        -27
+      ],
+      "world_bounds_xz_m": [
+        -1548.741,
+        -2721.863,
+        -1448.741,
+        -2621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0015-fj-0027",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/regions/core_fi-0015-fj-0027",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part00-baseline55/portable_reader.py",
+      "source_core_sha256": "4917a53de51d16dac65cd61af57681c784115ecc5895ba6f41c6ca69f0c00d88"
+    },
+    {
+      "tile_id": "core_fi-0017-fj-0016",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-2",
+      "tile_index": [
+        -17,
+        -16
+      ],
+      "world_bounds_xz_m": [
+        -1748.741,
+        -1621.863,
+        -1648.741,
+        -1521.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0017-fj-0016",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/regions/core_fi-0017-fj-0016",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part03-B3/portable_reader.py",
+      "source_core_sha256": "c693c65e8be3037d5a71783f28ae96f02a0b41e93a9595d3cd227a9a8741ce37"
+    },
+    {
+      "tile_id": "core_fi-0017-fj-0027",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-3",
+      "tile_index": [
+        -17,
+        -27
+      ],
+      "world_bounds_xz_m": [
+        -1748.741,
+        -2721.863,
+        -1648.741,
+        -2621.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "val",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0017-fj-0027",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/regions/core_fi-0017-fj-0027",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r03/part02-B2/portable_reader.py",
+      "source_core_sha256": "711f19f2b649d8aa3ab52b825f4668073781170085ecd5793f220be58c336937"
+    },
+    {
+      "tile_id": "core_fi-0018-fj-0019",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val",
+      "historical_exposure_status": "exposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-2",
+      "tile_index": [
+        -18,
+        -19
+      ],
+      "world_bounds_xz_m": [
+        -1848.741,
+        -1921.863,
+        -1748.741,
+        -1821.863
+      ],
+      "source_batch": "First100",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": true,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0018-fj-0019",
+      "win_data_dir": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/regions/core_fi-0018-fj-0019",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "win_reader_entry": "G:/Deepsunlight/shares/Manhattan-First100-complete-profile-20261020-r02/part01-first9/portable_reader.py",
+      "source_core_sha256": "b4c937ac4e84f58fcad9135b878b174a4c4e5fb83b828803037cda385e0abbde"
+    },
+    {
+      "tile_id": "core_fi-0018-fj-0012",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val_fresh_unexposed",
+      "historical_exposure_status": "unexposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-2",
+      "tile_index": [
+        -18,
+        -12
+      ],
+      "world_bounds_xz_m": [
+        -1848.741,
+        -1221.863,
+        -1748.741,
+        -1121.863
+      ],
+      "source_batch": "r05-3",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": false,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/full-city-output-r05-3/core_fi-0018-fj-0012",
+      "win_data_dir": "G:/Deepsunlight/engineering/full-city-output-r05-3/core_fi-0018-fj-0012",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/full-city-output-r05-3/core_fi-0018-fj-0012/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/full-city-output-r05-3/core_fi-0018-fj-0012/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "222f318d0d127858fd9c6004e62e980762df12035e02013a441dc2f85d884c69"
+    },
+    {
+      "tile_id": "core_fi-0018-fj-0013",
+      "canonical_role": "val_spatial_clean",
+      "legacy_partition_alias": "val_fresh_unexposed",
+      "historical_exposure_status": "unexposed",
+      "authoritative_dataset_role": "val",
+      "authoritative_training_partition": null,
+      "spatial_group": "grid1km_i-2_j-2",
+      "tile_index": [
+        -18,
+        -13
+      ],
+      "world_bounds_xz_m": [
+        -1848.741,
+        -1321.863,
+        -1748.741,
+        -1221.863
+      ],
+      "source_batch": "r05-3",
+      "legacy_batch_role": "train",
+      "annual_weeks": 52,
+      "annual_frames": 18808,
+      "sampling_spec": "52_weekly_full_sunrise_to_sunset_days_120s_512x512",
+      "historical_first100_or_r05aa": false,
+      "wsl_data_dir": "/mnt/g/Deepsunlight/engineering/full-city-output-r05-3/core_fi-0018-fj-0013",
+      "win_data_dir": "G:/Deepsunlight/engineering/full-city-output-r05-3/core_fi-0018-fj-0013",
+      "wsl_reader_entry": "/mnt/g/Deepsunlight/engineering/full-city-output-r05-3/core_fi-0018-fj-0013/reader-annual-r01/MANIFEST.json",
+      "win_reader_entry": "G:/Deepsunlight/engineering/full-city-output-r05-3/core_fi-0018-fj-0013/reader-annual-r01/MANIFEST.json",
+      "source_core_sha256": "4f5be842dead6bd3c114aba06a25eebca4118ab9083ca95f8ab640d4957b1a8c"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rind"
+version = "2.2.0rc5"
+description = "Unified Clean-Room Full-Day Urban Solar-Shadow World Model & Benchmark Suite (MANHATTAN_4445_ANNUAL_18808_V1)"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "numpy>=1.24,<2.5",
+    "torch>=2.1,<3.0",
+]
+
+[project.optional-dependencies]
+lz4 = ["lz4>=4.0"]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["rind", "rind.*"]
